@@ -5,7 +5,7 @@ from datetime import datetime
 # Định nghĩa hàm Python mà task sẽ thực hiện
 def hello_airflow():
     print("Hello, Airflow!")
-
+#ABJDSDJ
 # Định nghĩa DAG
 with DAG(
     'simple_hello_airflow_dag',   # Tên DAG
