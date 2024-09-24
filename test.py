@@ -1,5 +1,5 @@
 from airflow import DAG
-from airflow.operators.python_operator import PythonOperator
+from airflow.operators.python import PythonOperator
 from datetime import datetime
 
 # Định nghĩa hàm Python mà task sẽ thực hiện
@@ -14,7 +14,7 @@ with DAG(
         'start_date': datetime(2024, 9, 24),  # Thời gian bắt đầu
         'retries': 1,  # Số lần retry nếu task fail
     },
-    schedule_interval='@daily',   # Lịch chạy hàng ngày
+    schedule='@daily',   # Lịch chạy hàng ngày
     catchup=False,                # Không thực hiện các task trong quá khứ
 ) as dag:
 
