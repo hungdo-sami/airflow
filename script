@@ -1,0 +1,2 @@
+chmod +x install_airflow.sh
+./install_airflow.sh
