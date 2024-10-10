@@ -1,2 +1,8 @@
 chmod +x install_airflow.sh
 ./install_airflow.sh
+
+#join network overlay
+sudo docker network connect spark-network airflow-airflow-scheduler-1
+sudo docker network connect spark-network airflow-airflow-worker-1
+sudo docker network connect spark-network airflow-airflow-triggerer-1
+sudo docker network connect spark-network airflow-airflow-webserver-1
