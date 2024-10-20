@@ -1,6 +1,13 @@
 chmod +x install_airflow.sh
 ./install_airflow.sh
 
+sudo mkdir -p /opt/airflow/logs
+sudo chmod -R 777 /opt/airflow/logs
+sudo mkdir -p /opt/airflow/logs/scheduler
+sudo chmod -R 777 /opt/airflow/logs/scheduler
+
+
+
 #join network overlay
 sudo docker network connect spark-network airflow-airflow-scheduler-1
 sudo docker network connect spark-network airflow-airflow-worker-1
